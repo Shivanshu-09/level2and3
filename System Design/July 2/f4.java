@@ -34,13 +34,10 @@ class Main {
       
   }
 
+  // swap will not happen. Once the function is executed fully then it will come out of stack, So p1 and p2 are still the same
   static void swap(Person a, Person b){
-    int tage = a.age;
-    a.age = b.age;
-    b.age = tage;
-
-    String tname = a.name;
-    a.name = b.name;
-    b.name = tname;
+    Person t = a;
+    a = b;
+    b = t;
   }
 }

@@ -26,13 +26,24 @@ class Main {
       p2.name = "B";
       p2.sayHi();
       
-      Person temp = p1;
-      p1 = p2;
-      p2 = temp;
+      swap(p1, p2);
 
       p1.sayHi();
       p2.sayHi();
       
       
+  }
+
+  // We can only change the properties, swap is not possible because Java is pass by value. So only value is passed to functions rather than reference of the values.
+  // Which means we can swap values of arr through functions but cannot swap two different arrays.
+  // Reference of string is mutable but value is not.
+  static void swap(Person a, Person b){
+    int tage = a.age;
+    a.age = b.age;
+    b.age = tage;
+
+    String tname = a.name;
+    a.name = b.name;
+    b.name = tname;
   }
 }

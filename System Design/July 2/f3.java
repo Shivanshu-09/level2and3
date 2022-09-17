@@ -13,7 +13,7 @@ class Main {
   }
   
   
-    
+// Swap will happen in this case
   public static void main(String[] args) throws NumberFormatException, IOException {
       
       Person p1 = new Person();
@@ -26,17 +26,13 @@ class Main {
       p2.name = "B";
       p2.sayHi();
       
-      swap(p1, p2);
+      Person temp = p1;
+      p1 = p2;
+      p2 = temp;
 
       p1.sayHi();
       p2.sayHi();
       
       
-  }
-
-  static void swap(Person a, Person b){
-    Person t = a;
-    a = b;
-    b = t;
   }
 }
